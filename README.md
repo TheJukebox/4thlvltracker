@@ -4,14 +4,14 @@
 4th Level Tracker is an initiative tracker for D&D 5e, built using python3. It features a straight forward, no-frills
 interface that lets you track important things, like the hit points of all the characters engaged in combat.
 
-##Features
-###Current:
+## Features
+### Current:
 - Initiative tracking (duh).
 - An initiative roller.
 - Health tracking.
 - Concentration tracking.
 
-###Planned:
+### Planned:
 - Armour Class tracking.
 - Combat modifiers and damage resistance tracking.
 - Spell tracking.
@@ -22,7 +22,7 @@ interface that lets you track important things, like the hit points of all the c
 - Surprise round tracking.
 - Death saving throw tracking.
 
-##Usage
+## Usage
 To access different options of 4th Level Tracker, you simply type commands into any prompt.
 
 - `help` displays a similar set of instructions from within the program.
