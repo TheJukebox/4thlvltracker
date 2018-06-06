@@ -182,34 +182,3 @@ class initiative:
                     self.order[self.init[v]] = self.name[v]
             return self.order
 
-def roll():
-    """rolls psuedo-random d20s for initiative"""
-
-    try:
-            mod = int(input("MODIFIER: "))
-    except:
-            print("[!] Modifiers must be integers!")
-            return roll()
-
-    return random.randint(1,20)+mod # return a random d20 roll, plus the user's mod
-                    
-
-def get_hp():
-    """gets the hp of an item from user input"""
-
-    hp = input("HEALTH: ")
-    try:
-            return int(hp)
-    except:
-            if hp in ("quit","q","exit","e"):
-                    if not quit():
-                            return get_hp()
-            elif str.lower(hp) == "help":
-                    print(help)
-                    get_hp()
-            elif str.lower(hp) == "done":
-                    return str.lower(hp)
-            else:
-                    print("[!] HP scores must be integers!")
-                    return get_hp()
-
