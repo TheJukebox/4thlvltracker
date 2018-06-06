@@ -1,6 +1,6 @@
 # 4th Level Tracker
 ---
-##*An initiative tracker built for 5th Edition Dungeons &amp; Dragons*
+## *An initiative tracker built for 5th Edition Dungeons &amp; Dragons*
 4th Level Tracker is an initiative tracker for D&D 5e, built using python3. It features a straight forward, no-frills
 interface that lets you track important things, like the hit points of all the characters engaged in combat.
 
