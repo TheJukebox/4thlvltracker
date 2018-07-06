@@ -1,0 +1,4 @@
+
+*.swp
+__pycache__/dice.cpython-36.pyc
+__pycache__/initiative.cpython-36.pyc

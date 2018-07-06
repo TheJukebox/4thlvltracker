@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 import random
-from initiative import *
+import initiative
+import dice
 
 help = """\n\t~~~ / | 4th Level Tracker | \ ~~~
 (type "help" to print this usage information again)\n
@@ -14,18 +15,6 @@ for the specific character/creature. if you type an integer
 (positive or negative) it will add that integer to the
 creatures hp score.\n
 type "quit" or "exit" to exit the program.\n"""
-
-def roll():
-    """rolls psuedo-random d20s for initiative"""
-
-    try:
-            mod = int(input("MODIFIER: "))
-    except:
-            print("[!] Modifiers must be integers!")
-            return roll()
-
-    return random.randint(1,20)+mod # return a random d20 roll, plus the user's mod
-                    
 
 def get_hp():
     """gets the hp of an item from user input"""
@@ -63,7 +52,13 @@ def get_init():
             elif init == "done":
                     return init
             elif init == "roll":
-                    init = roll()
+                    try:
+                        mod = int(input("INITIATIVE MODIFIER: "))
+                    except:
+                        print("[!] Initiative modifiers must be integers!")
+                        return get_init()
+
+                    init = dice.roll(1,20,mod) 
                     print("Rolled {} for initiative.".format(init))
                     return init	
             else:
@@ -97,7 +92,7 @@ def quit():
             return False
 def main():
             
-    init_handler = initiative()
+    init_handler = initiative.initiative()
     print(help)
     print("[INITIATIVE CREATION]\n---------------------")	
 
@@ -114,5 +109,4 @@ def main():
                     # new items to the order.
                     init_handler.append_init(name, init, hp)
                             
-main()
-            
+main()            
